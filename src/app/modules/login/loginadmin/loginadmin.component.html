@@ -1,0 +1,68 @@
+<div class="page-bg">
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="container mt-3">
+    <hr>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header text-center textend" style="background-color:#007bff">
+                    LOGIN
+                </div>
+
+                <div class="card-body">
+                    <form class="form-signin" [formGroup]="loginForm"  (ngSubmit)="onLogin()">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="inputdoc" class="textsm">Correo:</label>
+                                <input type="text" formControlName="email" class="form-control" placeholder="Correo" required="" autofocus="">
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="contrasena" class="textsm">Contraseña:</label>
+                                <input type="password" formControlName="password" class="form-control" placeholder="Contraseña" required="" autofocus="">
+                            </div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color:#007bff;">
+        Entrar</button>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8"><a href="/registeradmin"><button class="btn btn-lg btn-primary btn-block" type="button" style="background-color:#0b9b3b;">
+                            Registrate</button></a></div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3"></div>
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-md-12 textend">
+        </div>
+    </div>
+
+</div>

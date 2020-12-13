@@ -1,0 +1,25 @@
+<button class="btn btn-secondary" (click)="loadDataCliente(clienteId)">Cargar datos actuales</button>
+
+<div class="card border-danger mb-3" style="max-width: 20rem;">
+    <div class="card-header">Actualización de datos</div>
+    <div class="card-body">
+        <div class="submit-form">
+            <div *ngIf="conId">
+                <p class="card-text">Modifique los datos</p>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input class="form-control" id="nombre" value="{{objeto.nombre}}" [(ngModel)]="objeto.nombre" name="nombre" />
+                </div>
+                <div class="form-group">
+                    <label for="cedula">Cédula</label>
+                    <input type="number" class="form-control" value="{{objeto.cedula}}" [(ngModel)]="objeto.cedula" name="cedula" />
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" class="form-control" value="{{objeto.direccion}}" [(ngModel)]="objeto.direccion" name="direccion" />
+                </div>
+                <button class="btn btn-primary " (click)="updateCliente(clienteId, objeto.nombre, objeto.cedula, objeto.direccion)">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>

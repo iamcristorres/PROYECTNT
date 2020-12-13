@@ -1,0 +1,37 @@
+<app-welcome></app-welcome>
+
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form>
+                <div class="row border p-3 border-dark bg-secondary" *ngIf="!submitted ">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="asignatura">Asignatura</label>
+                            <select name="asignatura" [(ngModel)]="carga.asignatura" class="form-control">
+                                        <option *ngFor="let item of asignaturasTodas" value='{{item.nombre }}' > {{item.nombre }} </option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="docente">Docente</label>
+                            <select name="docente" [(ngModel)]="carga.docente" class="form-control">
+                                        <option *ngFor="let item of docentesTodas" value='{{item.nombre }}' > {{item.nombre }} </option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button (click)="doCreateCarga(carga) " class="btn btn-primary ">Enviar</button>
+                    </div>
+                </div>
+
+                <div *ngIf="submitted ">
+                    <h4>Enviado correctamente</h4>
+                    <a href="/listaCarga" class="btn btn-primary">Agregar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

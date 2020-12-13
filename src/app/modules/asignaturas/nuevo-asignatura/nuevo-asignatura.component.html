@@ -1,0 +1,32 @@
+<app-welcome></app-welcome>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form>
+                <div class="row border p-3 border-dark bg-secondary" *ngIf="!submitted ">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="asignatura.nombre" name="nombre">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="ih">Ih/S</label>
+                            <input type="text" class="form-control" id="ih" placeholder="Intensidad Horaria" [(ngModel)]="asignatura.ih" name="ih">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button (click)="doCreateAsignatura(asignatura) " class="btn btn-primary ">Enviar</button>
+                    </div>
+                </div>
+
+                <div *ngIf="submitted ">
+                    <h4>Enviado correctamente</h4>
+                    <a href="/listaAsignaturas" class="btn btn-primary">Agregar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

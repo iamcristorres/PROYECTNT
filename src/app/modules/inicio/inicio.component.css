@@ -1,0 +1,12 @@
+.page-bg-img {
+    background: url('https://mdbootstrap.com/img/Photos/Others/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

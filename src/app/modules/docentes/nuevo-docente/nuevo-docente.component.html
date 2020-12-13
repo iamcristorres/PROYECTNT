@@ -1,0 +1,56 @@
+<app-welcome></app-welcome>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form>
+                <div class="row border p-3 border-dark bg-secondary" *ngIf="!submitted ">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="codigo">Codigo</label>
+                            <input type="text" class="form-control" id="codigo" placeholder="Codigo" [(ngModel)]="docente.codigo" name="codigo">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" [(ngModel)]="docente.apellido" name="apellido">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="nombres">Nombres</label>
+                            <input type="text" class="form-control" id="nombres" placeholder="Nombres" [(ngModel)]="docente.nombre" name="nombre">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="correo">Correo</label>
+                            <input type="text" class="form-control" id="correo" placeholder="Correo" [(ngModel)]="docente.correo" name="correo">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="telefono">Telefono</label>
+                            <input type="text" class="form-control" id="telefono" placeholder="Apellidos" [(ngModel)]="docente.telefono" name="telefono">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="direccion">Direccion</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Direccion" [(ngModel)]="docente.direccion" name="direccion">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button (click)="doCreateDocente(docente) " class="btn btn-primary ">Enviar</button>
+                    </div>
+                </div>
+
+                <div *ngIf="submitted ">
+                    <h4>Enviado correctamente</h4>
+                    <a href="/listaDocentes" class="btn btn-primary">Agregar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

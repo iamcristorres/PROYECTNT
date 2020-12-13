@@ -1,0 +1,29 @@
+<app-welcome></app-welcome>
+
+<button class="btn btn-secondary" (click)="loadDataAsignatura(asignaturaId)">Cargar datos actuales</button>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form>
+                <div class="row border p-3 border-dark bg-secondary">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" value="{{objeto.nombre}}" [(ngModel)]="objeto.nombre" name="nombre">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="ih">Ih/S</label>
+                            <input type="text" class="form-control" id="ih" placeholder="Intensidad Horaria" value="{{objeto.ih}}" [(ngModel)]="objeto.ih" name="ih">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button (click)="updateAsignatura(asignaturaId, objeto.nombre, objeto.ih)" class="btn btn-primary ">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

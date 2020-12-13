@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ntdtest-ad776"
+  },
+  "targets": {
+    "ntdtest-ad776": {
+      "hosting": {
+        "app-ntd": [
+          "ntdtest-ad776"
+        ]
+      }
+    }
+  }
+}

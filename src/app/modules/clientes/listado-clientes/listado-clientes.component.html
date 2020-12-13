@@ -1,0 +1,29 @@
+<p *ngIf="isLogged">
+
+    Usuario en sesión: {{user.email}}</p>
+<h1>Listado de clientes</h1>
+
+<table class="table">
+    <thead>
+        <th>Nombre:</th>
+        <th>Cédula</th>
+        <th>Dirección</th>
+        <th>Categoria</th>
+        <th>Eliminar</th>
+        <th>Actualizar</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientesTodos">
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.cedula}}</td>
+            <td>{{cliente.direccion}}</td>
+            <td>{{cliente.categoria}}</td>
+            <td>
+                <button (click)="doDeleteCliente(cliente.id)">Eliminar</button>
+            </td>
+            <td>
+                <a class="btn btn-primary" [routerLink]="['/modificaCliente/', cliente.id]">Modificar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
